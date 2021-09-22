@@ -12,6 +12,7 @@ The repo currently has these branches to work on:
 
 For the following steps replace *branch_name* with your teams working branch.
 If you are using git bash (command line) follow these steps to switch branches.
+> If you are using a UI follow their documentation or tutorial videos to switch branches
 * Find your way to the local version of the project
 * Type the command `git branch -a`
 * If you don't see your branch listed run `git pull`

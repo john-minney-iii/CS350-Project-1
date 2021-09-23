@@ -8,11 +8,128 @@
     <title>Play Page</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <style>
+        .container {
+            margin: auto;
+            overflow: auto;
+            padding: 0 20px;
+        }
+
+        .blackcard {
+            height: 250px;
+            width: 150px;
+            background-color: black;
+            border-radius: 15%;
+            margin: 20px;
+        }
+
+        .playersCard {
+            height: 250px;
+            width: 150px;
+            background-color: white;
+            border-radius: 15%;
+            border: 2px solid black;
+            margin: 20px;
+        }
+
+        .otherWhiteCard {
+            height: 175px;
+            width: 100px;
+            background-color: white;
+            border-radius: 15%;
+            border: 2px solid black;
+            margin: 20px;
+        }
+
+        ul li {
+            list-style: none;
+            float: left;
+        }
+    </style>
+
 </head>
 <body>
-    <h1>Play Page</h1>
-    <p>Testing Branches</p>
-    <p>Testing</p>
-    <p>Demo Test</p>
+    <p style="margin-left: 865px; font-weight: bold;">Rate This Card</p>
+
+    <div class="container" style="padding-left: 500px;">
+        <ul>
+            <li class="blackcard"></li>
+            <li class="playersCard"></li>
+
+            <li>
+                <ul>
+                    <li> <p style="font-weight: bold; margin-top: 10px;">Round: 1</p> </li>
+                    <br>
+                    <li> <p style="font-weight: bold;">Rate the white card from 1 - 10</p> </li>
+                    <br>
+                    <li>
+                        <form action="" id="cardRateings">
+                            <input type="radio" id="rateing1" name="rateing" value="1">
+                            <label for="rateing1">1</label>
+
+                            <input type="radio" id="rateing2" name="rateing" value="2">
+                            <label for="rateing2">2</label>
+
+                            <input type="radio" id="rateing3" name="rateing" value="3">
+                            <label for="rateing3">3</label>
+
+                            <input type="radio" id="rateing4" name="rateing" value="4">
+                            <label for="rateing4">4</label>
+
+                            <input type="radio" id="rateing5" name="rateing" value="5">
+                            <label for="rateing5">5</label>
+
+                            <br>
+
+                            <input type="radio" id="rateing6" name="rateing" value="6">
+                            <label for="rateing6">6</label>
+
+                            <input type="radio" id="rateing7" name="rateing" value="7">
+                            <label for="rateing7">7</label>
+
+                            <input type="radio" id="rateing8" name="rateing" value="8">
+                            <label for="rateing8">8</label>
+
+                            <input type="radio" id="rateing9" name="rateing" value="9">
+                            <label for="rateing9">9</label>
+
+                            <input type="radio" id="rateing10" name="rateing" value="10">
+                            <label for="rateing10">10</label>
+                        </form>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+
+    <br>
+
+    <div>
+        <ul>
+            <li class="otherWhiteCard"></li>
+            <li class="otherWhiteCard"></li>
+            <li class="otherWhiteCard"></li>
+            <li class="otherWhiteCard"></li>
+            <li class="otherWhiteCard"></li>
+            <li class="otherWhiteCard"></li>
+            <li class="otherWhiteCard"></li>
+            <li class="otherWhiteCard"></li>
+            <li class="otherWhiteCard"></li>
+            <li class="otherWhiteCard"></li>
+        </ul>
+    </div>
+
+    <br>
+
+    <div class="container">
+        <ul>
+            <li> <button style="margin-left: 600px; border-radius: 15px;">Quit</button> </li>
+            <li> <button form="cardRateings" style="margin-left: 520px; border-radius: 100%;">Submit</button> </li>
+        </ul>
+    </div>
+
+    <br>
 </body>
 </html>

@@ -2,6 +2,12 @@
 ### LMAO Rater - Cards Against Humanity Edition
 If you have any questions about the repo don't hesitate to reach out to me (John Minney) either on discord or in person. I'll help out however I can. Thanks!
 ***
+### Helpful Links
+* [Wireframes](https://drive.google.com/file/d/1AEX5SSGb8SkRphjMRcTisz7CaAjFmmYf/view?usp=sharing)
+* [Trello Board](https://trello.com/invite/b/sG8NbTUa/ff1a6878bca18a700b2939722b832863/cs350-project-1-cards-against-humanity-lmao-rater)
+* [Bootstrap](https://getbootstrap.com/)
+* [Google Docs](https://docs.google.com/document/d/1h5SaQgaS8cBbChJ9sOJOn-tKTe_8QvTDyvLXEAc75DU/edit)
+***
 ### Pushing to the Repo
 Due to merge conflicts we will have a seperate branch for each team of developers. Each team will uses these branches to push their code without causing merge conflicts between the teams. Below are the instructions to change branches.
 

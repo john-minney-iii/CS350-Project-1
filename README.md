@@ -9,7 +9,7 @@ If you have any questions about the repo don't hesitate to reach out to me (John
 * [Google Docs](https://docs.google.com/document/d/1h5SaQgaS8cBbChJ9sOJOn-tKTe_8QvTDyvLXEAc75DU/edit)
 ***
 ### Pushing to the Repo
-Due to merge conflicts we will have a seperate branch for each team of developers. Each team will uses these branches to push their code without causing merge conflicts between the teams. Below are the instructions to change branches.
+Due to merge conflicts we will have a seperate branch for each team of developers or task. We can then use these branches to push code without causing merge conflicts between the teams/tasks. Below are the instructions to change branches.
 
 The repo currently has these branches to work on:
 >* front-end_start

@@ -1,64 +1,90 @@
 <!-- CS350-Project-1/start/index.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Start Page</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
 
     <style>
-        .button {
-            border: none;
-            border-radius: 10px;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 32px;
-            margin: 4px 2px;
-            cursor: pointer;
-            background-color: #000000;
-            width: 250px;
-            height: 80px;
-            position: relative;
-        }
+      .button {
+        border: none;
+        border-radius: 10px;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 32px;
+        margin: 4px 2px;
+        cursor: pointer;
+        background-color: #000000;
+        width: 250px;
+        height: 80px;
+        position: relative;
+        bottom: -50px;
+      }
 
-        .cardBlack {
-            width: 280px;
-            border-radius: 25px;
-            height: 380px;
-            background: black;
-        }
+      .cardBlack {
+        width: 280px;
+        border-radius: 25px;
+        height: 380px;
+        background: black;
+        font-size: 25px;
+      }
 
-        .cardWhite {
-            width: 280px;
-            border-radius: 25px;
-            height: 380px;
-            background: white;
-            border-color: black;
-        }
+      .cardWhite {
+        width: 280px;
+        border-radius: 25px;
+        height: 380px;
+        background: white;
+        border-color: black;
+        border-width: thick;
+        font-size: 25px;
+      }
+
+      .pointer {
+        bottom: -150px;
+      }
     </style>
-
-</head>
-<body>
+  </head>
+  <body>
+    <br />
     <div class="row">
-        <div class="col">
-            <p class="card cardBlack justify-content-center text-white">
-                Black Card: add text later from data base
-            </p>
-        </div>
-        <div class="col">
-            <img src="/static/img/laugh.png" alt="Haha" width="300">
-        </div>
-        <div class="col">
-            <p class="card cardWhite justify-content-center">
-                White Card: add text later from data base
-            </p>
-        </div>
+      <div class="col">
+        <p class="card cardBlack p-3 text-white">
+          Black Card: add text later from data base
+        </p>
+      </div>
+      <div class="col" style="position: sticky">
+        <img
+          src="/static/img/laugh.png"
+          alt="Haha"
+          width="300"
+          style="position: relative; right: -53px"
+        />
+        <img
+          class="pointer"
+          src="/static/img/point.png"
+          alt="Hand Pointer"
+          width="100"
+          style="position: relative; right: 100px"
+        />
+      </div>
+      <div class="col">
+        <p class="card cardWhite pt-3">
+          White Card: add text later from data base
+        </p>
+      </div>
     </div>
-    <a href="/play/"><button class="button button1">Start!</button></a>
-</body>
+
+    <a href="play"> <button class="button button1">Start!</button></a>
+  </body>
 </html>

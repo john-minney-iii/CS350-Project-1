@@ -16,6 +16,6 @@ class PlayView(View):
         form = CardRateForm(request.POST)
         if form.is_valid():
             card_rating = form.cleaned_data['card_rating']
-            print('Card Rating')
+            print('Card Rating:', card_rating)
             # Redirect back to Play
             return HttpResponseRedirect('/play/')

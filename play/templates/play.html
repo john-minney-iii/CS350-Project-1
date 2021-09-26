@@ -70,12 +70,13 @@
             </div>
         </div>
         <div class="inline-div mt-3">
-            <p class="display-6 text-dark">Round: x</p>
-            <form method="post" action='/play/'>
+            <p class="display-6 text-dark">Round: {{ round }}</p>
+            <form method="post" action='/play/{{ round }}/'>
                 {% csrf_token %}
                 <div class="inline-div">{{ form }}</div>
                 <div class="inline-div">
                     <button type="submit" name="rate" class="btn btn-dark btn-small">Rate Card</button>
+                    <a href="/end/" class='btn btn-dark'>Quit</a>
                 </div>
             </form>
         </div>

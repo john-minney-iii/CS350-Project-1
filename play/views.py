@@ -8,14 +8,14 @@ from .forms import CardRateForm
 class PlayView(View):
     template_name = 'play.html'
     
-    def get(self, request):
-        context = {'form': CardRateForm()}
+    def get(self, request, round):
+        context = {'round': round, 'form': CardRateForm()}
         return render(request, self.template_name, context)
 
-    def post(self, request):
+    def post(self, request, round):
         form = CardRateForm(request.POST)
         if form.is_valid():
             card_rating = form.cleaned_data['card_rating']
             print('Card Rating:', card_rating)
             # Redirect back to Play
-            return HttpResponseRedirect('/play/')
+            return HttpResponseRedirect(f'/play/{round+1}/')

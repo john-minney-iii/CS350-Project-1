@@ -60,7 +60,7 @@
             <div class="card cah-card cah-black-card">
                 <div class="card-body">
                     <p class="card-text text-light">
-                        Black Card Text
+                        {{ black_card.card_text }}
                     </p>
                 </div>
             </div>
@@ -76,7 +76,7 @@
         </div>
         <div class="inline-div mt-3">
             <p class="display-6 text-dark">Round: {{ round }}</p>
-            <form method="post" action='/play/{{ round }}/'>
+            <form method="post" action='/play/{{ round }}/{% if current_card_index == 0 %}True{% else %}False{% endif %}/{{ black_card.pk }}'>
                 {% csrf_token %}
                 <div class="inline-div">{{ form }}</div>
                 <div class="inline-div">

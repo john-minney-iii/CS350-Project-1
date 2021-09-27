@@ -9,7 +9,8 @@ class PlayView(View):
     template_name = 'play.html'
     
     def get(self, request, round):
-        context = {'round': round, 'form': CardRateForm()}
+        # current_card_index is the card that will be highlighed
+        context = {'round': round, 'current_card_index': round % 8, 'form': CardRateForm()}
         return render(request, self.template_name, context)
 
     def post(self, request, round):

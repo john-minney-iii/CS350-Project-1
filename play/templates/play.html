@@ -85,7 +85,7 @@
                 {% csrf_token %}
                 <div class="inline-div">{{ form }}</div>
                 <div class="inline-div">
-                    <button type="submit" name="rate" class="btn btn-dark btn-small">Rate Card</button>
+                    <button type="submit" name="rate" class="btn btn-dark btn-small">Rate Card{% if current_card_index == 0 %} &amp; New Hand{% endif %}</button>
                     <a href="/end/" class='btn btn-dark'>Quit</a>
                 </div>
             </form>
@@ -93,6 +93,7 @@
     </div>
     <br class="clear-inline">
     <!-- Other White Cards -->
+    <!-- If current_card_index is 0, that means it is the last card in the size of the hand. In this case it would be 8 -->
     <div class="ms-5 mt-4">
         <div class="inline-div mt-3">
             <div class="card cah-card-sm cah-white-card {% if current_card_index == 1 %}cah-current-border{% else %}cah-other-border{% endif %}">

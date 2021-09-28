@@ -1,0 +1,214 @@
+[
+    {
+        "model": "play.blackcard",
+        "pk":1,
+        "fields": {
+            "card_text": "It's a pity that kids these days are all getting involved with _____."
+        }
+    },
+    {
+        "model": "play.blackcard",
+        "pk":2,
+        "fields": {
+            "card_text": "I drink to forget _____"
+        }
+    },
+    {
+        "model": "play.blackcard",
+        "pk":3,
+        "fields": {
+            "card_text": "TSA guidelines now prohibit _____ on airplanes."
+        }
+    },
+    {
+        "model": "play.blackcard",
+        "pk":4,
+        "fields": {
+            "card_text": "Today on Maury: \"Help! My son is _____!\""
+        }
+    },
+    {
+        "model": "play.blackcard",
+        "pk":5,
+        "fields": {
+            "card_text": "I'm sorry, Professor, but I couldn't complete my homework because of _____."
+        }
+    },
+    {
+        "model": "play.blackcard",
+        "pk":6,
+        "fields": {
+            "card_text": "_____. That's how I want to die."
+        }
+    },
+    {
+        "model": "play.blackcard",
+        "pk":7,
+        "fields": {
+            "card_text": "What gives me uncontrollable gas?"
+        }
+    },
+    {
+        "model": "play.blackcard",
+        "pk":8,
+        "fields": {
+            "card_text": "What's a girl's best friend?"
+        }
+    },
+    {
+        "model": "play.blackcard",
+        "pk":9,
+        "fields": {
+            "card_text": "The class field trip was completely ruined by _____"
+        }
+    },
+    {
+        "model": "play.blackcard",
+        "pk":10,
+        "fields": {
+            "card_text": "Coming to Broadway this season, _____: The Musical."
+        }
+    },
+    {
+        "model": "play.blackcard",
+        "pk":12,
+        "fields": {
+            "card_text": "The new Chevy Tahoe. With the power and space to take _____ everywhere you go."
+        }
+    },
+    {
+        "model": "play.blackcard",
+        "pk":12,
+        "fields": {
+            "card_text": "Maybe she's born with it. Maybe it's _____."
+        }
+    },
+    {
+        "model": "play.whitecard",
+        "pk": 1,
+        "fields": {
+            "card_text": "Grandma.",
+            "average_rank": 0.00
+        }
+    },
+    {
+        "model": "play.whitecard",
+        "pk": 2,
+        "fields": {
+            "card_text": "Italians.",
+            "average_rank": 0.00
+        }
+    },
+    {
+        "model": "play.whitecard",
+        "pk": 3,
+        "fields": {
+            "card_text": "Peanut Butter Jelly Time.",
+            "average_rank": 0.00
+        }
+    },
+    {
+        "model": "play.whitecard",
+        "pk": 4,
+        "fields": {
+            "card_text": "Harry Potter erotica.",
+            "average_rank": 0.00
+        }
+    },
+    {
+        "model": "play.whitecard",
+        "pk": 5,
+        "fields": {
+            "card_text": "Mormon feminists.",
+            "average_rank": 0.00
+        }
+    },
+    {
+        "model": "play.whitecard",
+        "pk": 6,
+        "fields": {
+            "card_text": "Primary voice.",
+            "average_rank": 0.00
+        }
+    },
+    {
+        "model": "play.whitecard",
+        "pk": 7,
+        "fields": {
+            "card_text": "Not being able to serve two masters.",
+            "average_rank": 0.00
+        }
+    },
+    {
+        "model": "play.whitecard",
+        "pk": 8,
+        "fields": {
+            "card_text": "Eating too many funeral potatoes.",
+            "average_rank": 0.00
+        }
+    },
+    {
+        "model": "play.whitecard",
+        "pk": 9,
+        "fields": {
+            "card_text": "Taking two pieces of really good sacrament bread.",
+            "average_rank": 0.00
+        }
+    },
+    {
+        "model": "play.whitecard",
+        "pk": 10,
+        "fields": {
+            "card_text": "Slapping Ted Cruz over and over.",
+            "average_rank": 0.00
+        }
+    },
+    {
+        "model": "play.whitecard",
+        "pk": 11,
+        "fields": {
+            "card_text": "The good, hardworking people of Dubuque, Iowa.",
+            "average_rank": 0.00
+        }
+    },
+    {
+        "model": "play.whitecard",
+        "pk": 12,
+        "fields": {
+            "card_text": "Shouting the loudest.",
+            "average_rank": 0.00
+        }
+    },
+    {
+        "model": "play.whitecard",
+        "pk": 13,
+        "fields": {
+            "card_text": "Whipping lower-class white men into a xenophobic frenzy.",
+            "average_rank": 0.00
+        }
+    },
+    {
+        "model": "play.whitecard",
+        "pk": 14,
+        "fields": {
+            "card_text": "A gnawing sense of dread.",
+            "average_rank": 0.00
+        }
+    },
+    {
+        "model": "play.whitecard",
+        "pk": 15,
+        "fields": {
+            "card_text": "\"Tweeting\".",
+            "average_rank": 0.00
+        }
+    },
+    {
+        "model": "play.whitecard",
+        "pk": 16,
+        "fields": {
+            "card_text": "The plot of a Michael Bay movie.",
+            "average_rank": 0.00
+        }
+    }
+]

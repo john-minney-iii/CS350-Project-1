@@ -1,4 +1,5 @@
 <!-- CS350-Project-1/play/index.html -->
+{% load index %} <!-- Template Tag to get a list item -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,14 +70,18 @@
             <div class="card cah-card cah-white-card cah-other-border">
                 <div class="card-body">
                     <p class="card-text text-dark">
-                        White Card to Rate Text
+                        {% if current_card_index == 0 %}
+                            {{ white_cards|index:8 }}
+                        {% else %}
+                            {{ white_cards|index:current_card_index }}
+                        {% endif %}
                     </p>
                 </div>
             </div>
         </div>
         <div class="inline-div mt-3">
             <p class="display-6 text-dark">Round: {{ round }}</p>
-            <form method="post" action='/play/{{ round }}/{% if current_card_index == 0 %}True{% else %}False{% endif %}/{{ black_card.pk }}'>
+            <form method="post" action='/play/{{ round }}/{% if current_card_index == 0 %}True{% else %}False{% endif %}/{{ black_card.pk }}/{% for card in white_cards %}{{ card.pk }}{% if not forloop.last %}_{% endif %}{% endfor %}'>
                 {% csrf_token %}
                 <div class="inline-div">{{ form }}</div>
                 <div class="inline-div">
@@ -93,7 +98,7 @@
             <div class="card cah-card-sm cah-white-card {% if current_card_index == 1 %}cah-current-border{% else %}cah-other-border{% endif %}">
                 <div class="card-body">
                     <p class="card-text text-dark">
-                        White Card Text
+                        {{ white_cards.0.card_text }}
                     </p>
                 </div>
             </div>
@@ -102,7 +107,7 @@
             <div class="card cah-card-sm cah-white-card {% if current_card_index == 2 %}cah-current-border{% else %}cah-other-border{% endif %}">
                 <div class="card-body">
                     <p class="card-text text-dark">
-                        White Card Text
+                        {{ white_cards.1.card_text }}
                     </p>
                 </div>
             </div>
@@ -111,7 +116,7 @@
             <div class="card cah-card-sm cah-white-card {% if current_card_index == 3 %}cah-current-border{% else %}cah-other-border{% endif %}">
                 <div class="card-body">
                     <p class="card-text text-dark">
-                        White Card Text
+                        {{ white_cards.2.card_text }}
                     </p>
                 </div>
             </div>
@@ -120,7 +125,7 @@
             <div class="card cah-card-sm cah-white-card {% if current_card_index == 4 %}cah-current-border{% else %}cah-other-border{% endif %}">
                 <div class="card-body">
                     <p class="card-text text-dark">
-                        White Card Text
+                        {{ white_cards.3.card_text }}
                     </p>
                 </div>
             </div>
@@ -129,7 +134,7 @@
             <div class="card cah-card-sm cah-white-card {% if current_card_index == 5 %}cah-current-border{% else %}cah-other-border{% endif %}">
                 <div class="card-body">
                     <p class="card-text text-dark">
-                        White Card Text
+                        {{ white_cards.4.card_text }}
                     </p>
                 </div>
             </div>
@@ -138,7 +143,7 @@
             <div class="card cah-card-sm cah-white-card {% if current_card_index == 6 %}cah-current-border{% else %}cah-other-border{% endif %}">
                 <div class="card-body">
                     <p class="card-text text-dark">
-                        White Card Text
+                        {{ white_cards.5.card_text }}
                     </p>
                 </div>
             </div>
@@ -147,7 +152,7 @@
             <div class="card cah-card-sm cah-white-card {% if current_card_index == 7 %}cah-current-border{% else %}cah-other-border{% endif %}">
                 <div class="card-body">
                     <p class="card-text text-dark">
-                        White Card Text
+                        {{ white_cards.6.card_text }}
                     </p>
                 </div>
             </div>
@@ -156,7 +161,7 @@
             <div class="card cah-card-sm cah-white-card {% if current_card_index == 0 %}cah-current-border{% else %}cah-other-border{% endif %}">
                 <div class="card-body">
                     <p class="card-text text-dark">
-                        White Card Text
+                        {{ white_cards.7.card_text }}
                     </p>
                 </div>
             </div>

@@ -16,7 +16,7 @@ To create your own local dev enviroment follow the steps below.
 > 3. Souce your virtual env (if you are using one)
 > 4. Run the following commands
 > * `python manage.py makemigrations`
-> * `python manage.py migrate play`   
+> * `python manage.py migrate`   
 > * `python manage.py loaddata cards.json`
 > 5. Run your local server with `python manage.py runserver`
 

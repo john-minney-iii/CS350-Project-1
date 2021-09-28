@@ -9,6 +9,22 @@ If you have any questions about the repo don't hesitate to reach out to me (John
 * [Google Docs](https://docs.google.com/document/d/1h5SaQgaS8cBbChJ9sOJOn-tKTe_8QvTDyvLXEAc75DU/edit)
 * [Branches Info](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches)
 ***
+### Creating a Local Dev Enviroment
+To create your own local dev enviroment follow the steps below.
+> 1. Clone the repo to your local machine
+> 2. Move your way to the project directory
+> 3. Souce your virtual env (if you are using one)
+> 4. Run the following commands
+> * `python manage.py makemigrations`
+> * `python manage.py migrate play`   
+> * `python manage.py loaddata cards.json`
+> 5. Run your local server with `python manage.py runserver`
+
+These steps will create a local version of the project and load your local dev database with dummy data. This data <strong>will</strong> with new data by the backend team.
+
+<strong><em>Keey in Mind! Any Code you wite concerning the cards might need to change depending on the backend team's design decisions.</em></strong>
+
+***
 ### Pushing to the Repo
 Due to merge conflicts we will have a seperate branch for each team of developers or task. We can then use these branches to push code without causing merge conflicts between the teams/tasks. Below are the instructions to change branches.
 

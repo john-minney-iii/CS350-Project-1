@@ -17,7 +17,6 @@ To create your own local dev enviroment follow the steps below.
 > 4. Run the following commands
 > * `python manage.py makemigrations`
 > * `python manage.py migrate`   
-> * `python manage.py loaddata cards.json`
 > 5. Run your local server with `python manage.py runserver`
 
 These steps will create a local version of the project and load your local dev database with dummy data. This data <strong>will</strong> with new data by the backend team.

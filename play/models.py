@@ -5,9 +5,15 @@ class WhiteCard(models.Model):
     CardNo = models.IntegerField()
     CardText = models.CharField(max_length=50)
 
+    def __str__(self) -> str:
+        return self.CardText
+
 class BlackCard(models.Model):
     CardNo = models.IntegerField()
     CardText = models.CharField(max_length=50)
+
+    def __str__(self) -> str:
+        return self.CardText
 
 
 class Score(models.Model):

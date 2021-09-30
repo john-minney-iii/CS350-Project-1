@@ -27,10 +27,13 @@ These steps will create a local version of the project and load your local dev d
 ### Pushing to the Repo
 Due to merge conflicts we will have a seperate branch for each team of developers or task. We can then use these branches to push code without causing merge conflicts between the teams/tasks. Below are the instructions to change branches.
 
-The repo currently has these branches to work on:
->* front-end_start
->* front-end_play
->* front-end_end
+To create a branch you can either follow the steps below or ask me (John Minney) and I can get it set up for you.
+> * While looking at the Github page for the project look for a dropdown menu that will most likely say "main"
+> * Click on this dropdown and make sure you are on the main branch
+> * Enter the name of your new branch in the text box
+> * Once you enter the name there will be a section that says "Create branch: branch_name from 'main'
+> * Click that and it will create the new branch
+> * Once you have created the new branch pull on your local machine and you will be able to checkout the new branch
 
 For the following steps replace *branch_name* with your teams working branch.
 If you are using git bash (command line) follow these steps to switch branches.

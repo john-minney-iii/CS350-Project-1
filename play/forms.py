@@ -7,5 +7,5 @@ class CardRateForm(forms.Form):
     CHOICES = [(str(x), x) for x in range(1, 11)]
     card_rating = forms.CharField(
         label='Rate the White Card from 1-10',
-        widget=forms.RadioSelect(choices=CHOICES)
+        widget=forms.Select(choices=CHOICES)
     )

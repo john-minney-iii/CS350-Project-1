@@ -83,7 +83,9 @@
             <p class="display-6 text-dark">Round: {{ round }}</p>
             <form method="post" action='/play/{{ round }}/{% if current_card_index == 0 %}True{% else %}False{% endif %}/{{ black_card.pk }}/{% for card in white_cards %}{{ card.pk }}{% if not forloop.last %}_{% endif %}{% endfor %}'>
                 {% csrf_token %}
+                <p>Card Score (0-10):</p>
                 <div class="inline-div">{{ form }}</div>
+                <br/>
                 <div class="inline-div">
                     <button type="submit" name="rate" class="btn btn-dark btn-small">Rate Card{% if current_card_index == 0 %} &amp; New Hand{% endif %}</button>
                     <a href="/end/" class='btn btn-dark'>Quit</a>

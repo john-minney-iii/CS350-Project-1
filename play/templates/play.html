@@ -44,6 +44,11 @@
 
         .clear-inline { clear: both; }
 
+        .center {
+            margin: auto;
+            text-align: center;
+        }
+
     </style>
 
 </head>
@@ -79,14 +84,14 @@
                 </div>
             </div>
         </div>
-        <div class="inline-div mt-3">
-            <p class="display-6 text-dark">Round: {{ round }}</p>
+        <div class="inline-div mt-3 center">
+            <p class="display-4 text-dark">Round: {{ round }}</p>
             <form method="post" action='/play/{{ round }}/{% if current_card_index == 0 %}True{% else %}False{% endif %}/{{ black_card.pk }}/{% for card in white_cards %}{{ card.pk }}{% if not forloop.last %}_{% endif %}{% endfor %}'>
                 {% csrf_token %}
-                <p class="inline-div">Card Score (0-10):</p>
-                <div>{{ form }}</div>
+                <p class="inline-div display-6">Card Score (0-10):</p>
+                <div class="display-6">{{ form }}</div>
                 <br/>
-                <div class="inline-div">
+                <div class="display-6">
                     <button type="submit" name="rate" class="btn btn-dark btn-small">Rate Card{% if current_card_index == 0 %} &amp; New Hand{% endif %}</button>
                     <a href="/end/" class='btn btn-dark'>Quit</a>
                 </div>

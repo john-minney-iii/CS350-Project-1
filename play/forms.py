@@ -9,3 +9,4 @@ class CardRateForm(forms.Form):
         label='',
         widget=forms.Select(choices=CHOICES)
     )
+    

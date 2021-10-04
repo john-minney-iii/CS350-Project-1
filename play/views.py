@@ -63,3 +63,12 @@ class PlayView(View):
     """
     def getRandomWhiteCards(self, set_size: int) -> list[WhiteCard]:
         return random.sample(list(WhiteCard.objects.all()), set_size)
+
+    def test_view(request):
+        if request.method == 'POST':
+            form = CardRateForm(request.POST)
+            if form.is_valid():
+                val = form.cleaned_data.get("card_rating")
+        else:
+            form = CardRateForm()
+        return render(request, 'template.html', locals())

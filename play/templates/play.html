@@ -49,6 +49,12 @@
             text-align: center;
         }
 
+        .round {
+            border-radius: 50%;
+            height: 1.5em;
+            width: 1.5em;
+        }
+
     </style>
 
 </head>
@@ -88,8 +94,22 @@
             <p class="display-5 text-dark">Round: {{ round }}</p>
             <form method="post" action='/play/{{ round }}/{% if current_card_index == 0 %}True{% else %}False{% endif %}/{{ black_card.pk }}/{% for card in white_cards %}{{ card.pk }}{% if not forloop.last %}_{% endif %}{% endfor %}'>
                 {% csrf_token %}
-                <p class="inline-div">Card Score (0-10):</p>
-                <div class="display-6">{{ form }}</div>
+                <p class="inline-div center">Rate the white card from 1-10:</p>
+                <br/>
+                <div class="display-5">
+                    <!-- {{ form }} -->
+                    <button class="round" type="submit" name="card_rating" value="1">1</button>
+                    <button class="round" type="submit" name="card_rating" value="2">2</button>
+                    <button class="round" type="submit" name="card_rating" value="3">3</button>
+                    <button class="round" type="submit" name="card_rating" value="4">4</button>
+                    <button class="round" type="submit" name="card_rating" value="5">5</button>
+                    <br/>
+                    <button class="round" type="submit" name="card_rating" value="6">6</button>
+                    <button class="round" type="submit" name="card_rating" value="7">7</button>
+                    <button class="round" type="submit" name="card_rating" value="8">8</button>
+                    <button class="round" type="submit" name="card_rating" value="9">9</button>
+                    <button class="round" type="submit" name="card_rating" value="10">10</button>
+                </div>
                 <br/>
                 <div class="display-6">
                     <button type="submit" name="rate" class="btn btn-dark btn-small">Rate Card{% if current_card_index == 0 %} &amp; New Hand{% endif %}</button>

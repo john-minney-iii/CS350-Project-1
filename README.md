@@ -8,6 +8,7 @@ If you have any questions about the repo don't hesitate to reach out to me (John
 * [Bootstrap](https://getbootstrap.com/)
 * [Google Docs](https://docs.google.com/document/d/1h5SaQgaS8cBbChJ9sOJOn-tKTe_8QvTDyvLXEAc75DU/edit)
 * [Branches Info](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches)
+* [Super Awesome and Amazing Git Branch/PR Tutorial](https://youtu.be/0urqEJmf73s)
 ***
 ### Creating a Local Dev Enviroment
 To create your own local dev enviroment follow the steps below.
@@ -26,6 +27,8 @@ These steps will create a local version of the project and load your local dev d
 ***
 ### Pushing to the Repo
 Due to merge conflicts we will have a seperate branch for each team of developers or task. We can then use these branches to push code without causing merge conflicts between the teams/tasks. Below are the instructions to change branches.
+
+Make Sure to Checkout Jacob's Tutorial. It is amazing [Video Link](https://youtu.be/0urqEJmf73s)
 
 To create a branch you can either follow the steps below or ask me (John Minney) and I can get it set up for you.
 > * While looking at the Github page for the project look for a dropdown menu that will most likely say "main"

@@ -71,6 +71,14 @@
             margin: auto;
             text-align: center;
         }
+        
+        .quitBtn {
+            border: 2px solid black; 
+            width: 150px;
+            height: 45px;
+            border-radius: 8px;
+            font-weight: bolder;
+        }
 
     </style>
 
@@ -223,6 +231,11 @@
                 <p class="horizontal-center">{% if current_card_index == 0 %} % {% endif %}</p>
             </div>
         </div>
+    </div>
+
+    <br class="clear-inline">
+    <div class="horizontal-center" style="margin: 50px;">
+        <a href=""> <button type="button" class="btn btn-outline-dark quitBtn">Quit</button> </a>
     </div>
 
 </body>

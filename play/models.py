@@ -1,6 +1,5 @@
 from django.db import models
 
-
 class WhiteCard(models.Model):
     CardNo = models.IntegerField()
     CardText = models.CharField(max_length=50)
@@ -8,11 +7,10 @@ class WhiteCard(models.Model):
     def __str__(self) -> str:
         return self.CardText
 
-
     def findScore(self, blackCard):
         for score in Score.objects.all():
             if score.Whitecard == self:
-                if score.Blackcard == self:
+                if score.Blackcard == blackCard:
                     return score
 
 
@@ -23,11 +21,10 @@ class BlackCard(models.Model):
     def __str__(self) -> str:
         return self.CardText
 
-
     def findScore(self, whiteCard):
         for score in Score.objects.all():
             if score.Blackcard == self:
-                if score.Whitecard == self:
+                if score.Whitecard == whiteCard:
                     return score
 
 

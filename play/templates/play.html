@@ -52,7 +52,7 @@
         }
 
         .round:hover {
-            background-color: darkgray;
+            background-color: #8F8F8F;
         }
 
         .center {
@@ -240,7 +240,18 @@
 
     <br class="clear-inline">
     <div class="horizontal-center" style="margin: 50px;">
+        {% if current_card_index == 0 %}
         <a href="/end/"> <button type="button" class="btn btn-outline-dark quitBtn">Quit</button> </a>
+        <div style="float: right;">
+            <span>Submit</span>
+            <button type="button" class="btn btn-outline-dark quitBtn">Test</button>
+        </div>
+
+        {%else%}
+        <a href="/end/"> <button type="button" class="btn btn-outline-dark quitBtn">Quit</button> </a>
+
+        {% endif %}
+
     </div>
 
 </body>

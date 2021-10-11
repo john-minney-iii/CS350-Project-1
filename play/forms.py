@@ -11,4 +11,5 @@ class CardRateForm(forms.Form):
     # )
 
     card_rating = forms.CharField()
+    white_card_pk = forms.IntegerField(widget=forms.HiddenInput(), required=False)
     

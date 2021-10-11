@@ -8,10 +8,13 @@ class WhiteCard(models.Model):
         return self.CardText
 
     def findScore(self, blackCard):
-        for score in Score.objects.all():
-            if score.Whitecard == self:
-                if score.Blackcard == blackCard:
-                    return score
+        return Score.objects.filter(
+            WhiteCard=self,
+            BlackCard=blackCard
+        )[0]
+
+    def findScoreAverage(self, blackCard):
+        return self.findScore(blackCard).return_averages()
 
 
 class BlackCard(models.Model):
@@ -22,10 +25,10 @@ class BlackCard(models.Model):
         return self.CardText
 
     def findScore(self, whiteCard):
-        for score in Score.objects.all():
-            if score.Blackcard == self:
-                if score.Whitecard == whiteCard:
-                    return score
+        return Score.objects.filter(
+            WhiteCard=whiteCard,
+            BlackCard=self
+        )[0]
 
 
 class Score(models.Model):
@@ -36,8 +39,10 @@ class Score(models.Model):
     timesAppeared = models.IntegerField(default=0)
 
     def return_averages(self):
-        average = self.rating / self.timesAppeared
-        return average
+        if self.timesAppeared != 0:
+            average = self.rating / self.timesAppeared
+            return average
+        return 0
 
     def add_score(self, score):
         self.rating += score

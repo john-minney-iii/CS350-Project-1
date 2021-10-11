@@ -1,6 +1,6 @@
 # CS350-Project-1/play/views.py
 
-from play.models import BlackCard, WhiteCard
+from play.models import BlackCard, WhiteCard, Score
 from django.http.response import HttpResponseRedirect
 from django.shortcuts import render
 from django.views import View
@@ -34,7 +34,6 @@ class PlayView(View):
             context['black_card'] = BlackCard.objects.get(pk=bpk)
             context['white_cards'] = []
             for primary_key in wpks.split('_'):
-                print(primary_key)
                 context['white_cards'].append(WhiteCard.objects.get(pk=primary_key))
 
         return render(request, self.template_name, context)
@@ -43,7 +42,15 @@ class PlayView(View):
         form = CardRateForm(request.POST)
         if form.is_valid():
             card_rating = form.cleaned_data['card_rating']
-            print('Card Rating:', card_rating)
+            # Score the Cards
+            played_white_card = WhiteCard.objects.get(pk=form.cleaned_data['white_card_pk'])
+            played_black_card = BlackCard.objects.get(pk=bpk)
+            score = Score.objects.filter(
+                WhiteCard=played_white_card,
+                BlackCard=played_black_card
+            )[0]
+            score.add_score(int(card_rating))
+            score.save()
             # Redirect back to Play
             return HttpResponseRedirect(f'/play/{round+1}/{shuffle}/{bpk}/{wpks}')
 

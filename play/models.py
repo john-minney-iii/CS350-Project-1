@@ -39,7 +39,7 @@ class Score(models.Model):
     timesAppeared = models.IntegerField(default=0)
 
     def __str__(self) -> str:
-        return f'Black Card: {BlackCard.CardText}, White Card: {WhiteCard.CardText}'
+        return f'Black Card: {BlackCard.CardNo}, White Card: {WhiteCard.CardNo}'
 
     def return_averages(self):
         if self.timesAppeared != 0:

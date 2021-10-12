@@ -2,7 +2,7 @@
 
 from play.models import BlackCard, WhiteCard, Score
 from django.http.response import HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.views import View
 from .forms import CardRateForm
 
@@ -51,6 +51,8 @@ class PlayView(View):
             )[0]
             score.add_score(int(card_rating))
             score.save()
+            if round % 8 == 0:
+                return HttpResponseRedirect(f'/play/average/{round+1}/{shuffle}/{bpk}/{wpks}')
             # Redirect back to Play
             return HttpResponseRedirect(f'/play/{round+1}/{shuffle}/{bpk}/{wpks}')
 
@@ -70,3 +72,13 @@ class PlayView(View):
     """
     def getRandomWhiteCards(self, set_size: int) -> list[WhiteCard]:
         return random.sample(list(WhiteCard.objects.all()), set_size)
+
+class PlayAverageView(View):
+    template_name = 'play-averages.html'
+
+    def get(self, request, round: int, shuffle: str, bpk: int, wpks: str):
+        context = {'black_card': BlackCard.objects.get(pk=bpk), 'link': f'/play/{round}/{shuffle}/{bpk}/{wpks}'}
+        context['white_cards'] = []
+        for primary_key in wpks.split('_'):
+            context['white_cards'].append(WhiteCard.objects.get(pk=primary_key))
+        return render(request, self.template_name, context)

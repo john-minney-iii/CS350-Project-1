@@ -38,6 +38,9 @@ class Score(models.Model):
     rating = models.DecimalField(max_digits=4,decimal_places=2)
     timesAppeared = models.IntegerField(default=0)
 
+    def __str__(self) -> str:
+        return f'Black Card: {BlackCard.CardText}, White Card: {WhiteCard.CardText}'
+
     def return_averages(self):
         if self.timesAppeared != 0:
             average = self.rating / self.timesAppeared

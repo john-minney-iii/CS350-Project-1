@@ -23,4 +23,4 @@ def getPK(indexable, i):
 def get_score_average(obj, black_card):
     print('White Card:', obj)
     print('Black Card:', black_card)
-    return obj.findScoreAverage(black_card)
+    return round(obj.findScoreAverage(black_card), 2)

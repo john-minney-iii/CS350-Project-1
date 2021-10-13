@@ -88,10 +88,14 @@
     <center><h1 style="font-size: 150px;"><strong><font face = "Times New Roman", Times, serif>LMAO Rater</font></strong></h1>
     <h2><font face = "Copperplate", fantasy;>Cards Against Humanity Edition</font></h2></center>
         <center><div class="overflow1"><div class= "float-containter">
-        
+
+            {% for card in black_cards %}
             <div class="float-child">
-         <div><p class = "card cardBlack justify-content-center">card text goes here</p></div>
+                <div>
+                    <p class = "card cardBlack justify-content-center">{{ card.CardText }}</p>
+                </div>
             </div>
+            {% endfor %}
         
             <div class="float-child">
          <div><p class = "card cardWhite justify-content-center">text also goes here</p></div>
@@ -100,5 +104,6 @@
 
         </div></div></center>
     <center><div class = "stickybtm"><a href="/play/1/False/0/0"><button class ="button button 1">Play Again</button></a></div></center>
+
 </body>
 </html>

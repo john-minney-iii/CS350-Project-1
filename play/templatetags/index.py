@@ -12,10 +12,6 @@ register = template.Library()
 def index(indexable, i):
     return indexable[i-1]
 
-@register.filter
-def getPK(indexable, i):
-    return indexable[i-1].pk
-
 @register.simple_tag
 def get_card_text_by_index(index, cards) -> str:
     return cards[index].CardText
@@ -25,6 +21,10 @@ def index_card_match_boder (index, card, cards) -> str:
     if index == cards.index(card):
         return 'cah-current-border'
     return 'cah-other-border'
+
+@register.simple_tag
+def get_pk_text_by_index(index, cards) -> int:
+    return cards[index].pk
 
 """
     Get the Average Rating for a Black Card and White Card

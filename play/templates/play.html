@@ -120,12 +120,12 @@
             <p class="display-5 text-dark">Round: {{ round }}</p>
             <form method="post" action='/play/{{ num_cards }}/{{ round }}/{{ index }}/False/{{ black_card.pk }}/{% for card in white_cards %}{{ card.pk }}{% if not forloop.last %}_{% endif %}{% endfor %}/'>
                 {% csrf_token %}
-                <p class="inline-div horizontal-center">Rate the white card from 1-10:</p>
+                <p class="inline-div horizontal-center mb-1">Rate how funny the White Card is for the Black card on a 1-10 scale:</p>
                 <br/>
                 <div class="display-5">
                     <input
                         name="white_card_pk"
-                        value="1"
+                        value="{% get_pk_text_by_index index white_cards %}"
                         style="display: none"
                     />
                     <!-- {{ form }} -->

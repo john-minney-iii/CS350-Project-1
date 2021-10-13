@@ -5,8 +5,7 @@ from django.http.response import HttpResponse, HttpResponseRedirect
 from django.views import View
 from django.shortcuts import redirect, render
 from .forms import CardRateForm
-
-from play.models import BlackCard, WhiteCard
+from play.models import BlackCard, WhiteCard, Score
 
 class PlayView(View):
     template_name = 'play.html'
@@ -31,6 +30,15 @@ class PlayView(View):
                 pk=form.cleaned_data['white_card_pk']
             )
             played_black_card = BlackCard.objects.get(pk=bpk)
+            new_score = Score.objects.filter(
+                WhiteCard=played_white_card,
+                BlackCard=played_black_card
+            )[0]
+            new_score.add_score(int(card_rating))
+            new_score.save()
+            print('Black Card:', played_black_card)
+            print('White Card:', played_white_card)
+            print('Score:', card_rating)
             if index == num_cards - 1: 
                 index = 0
                 return HttpResponseRedirect(f'/play/score/{num_cards}/{round}/{index}/{shuffle}/{bpk}/{wpks}/')

@@ -119,8 +119,11 @@
             <div class="inline-div mt-3">
             <div class="card cah-card-sm cah-white-card cah-other-border">
                 <div class="card-body">
+                    <p class="text-danger h5 horizontal-center">
+                        Card Score: {% get_score_average card black_card %}
+                    </p>
                     <p class="card-text text-dark center">
-                        {{ card.CardText }}
+                        <span>{{ card.CardText }}</span><br>
                     </p>
                 </div>
             </div>

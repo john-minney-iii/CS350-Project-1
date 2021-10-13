@@ -16,6 +16,16 @@ def index(indexable, i):
 def getPK(indexable, i):
     return indexable[i-1].pk
 
+@register.simple_tag
+def get_card_text_by_index(index, cards) -> str:
+    return cards[index].CardText
+
+@register.simple_tag
+def index_card_match_boder (index, card, cards) -> str:
+    if index == cards.index(card):
+        return 'cah-current-border'
+    return 'cah-other-border'
+
 """
     Get the Average Rating for a Black Card and White Card
 """

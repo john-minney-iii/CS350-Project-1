@@ -114,92 +114,24 @@
     <br class="clear-inline">
 
     <!-- Other White Cards -->
-    <!-- If current_card_index is 0, that means it is the last card in the size of the hand. In this case it would be 8 -->
     <div class="ms-5 mt-4">
-        <div class="inline-div mt-3">
+        {% for card in white_cards %}
+            <div class="inline-div mt-3">
             <div class="card cah-card-sm cah-white-card cah-other-border">
                 <div class="card-body">
                     <p class="card-text text-dark center">
-                        {{ white_cards.0.CardText }}
+                        {{ card.CardText }}
                     </p>
                 </div>
-                <p class="horizontal-center">{% get_score_average white_cards.0 black_card %}%</p>
             </div>
         </div>
-        <div class="inline-div mt-3">
-            <div class="card cah-card-sm cah-white-card cah-other-border">
-                <div class="card-body">
-                    <p class="card-text text-dark center">
-                        {{ white_cards.1.CardText }}
-                    </p>
-                </div>
-                <p class="horizontal-center">{% get_score_average white_cards.1 black_card %}%</p>
-            </div>
-        </div>
-        <div class="inline-div mt-3">
-            <div class="card cah-card-sm cah-white-card cah-other-border">
-                <div class="card-body">
-                    <p class="card-text text-dark center">
-                        {{ white_cards.2.CardText }}
-                    </p>
-                </div>
-                <p class="horizontal-center">{% get_score_average white_cards.2 black_card %}%</p>
-            </div>
-        </div>
-        <div class="inline-div mt-3">
-            <div class="card cah-card-sm cah-white-card cah-other-border">
-                <div class="card-body">
-                    <p class="card-text text-dar center">
-                        {{ white_cards.3.CardText }}
-                    </p>
-                </div>
-                <p class="horizontal-center">{% get_score_average white_cards.3 black_card %}%</p>
-            </div>
-        </div>
-        <div class="inline-div mt-3">
-            <div class="card cah-card-sm cah-white-card cah-other-border">
-                <div class="card-body">
-                    <p class="card-text text-dark center">
-                        {{ white_cards.4.CardText }}
-                    </p>
-                </div>
-                <p class="horizontal-center">{% get_score_average white_cards.4 black_card %}%</p>
-            </div>
-        </div>
-        <div class="inline-div mt-3">
-            <div class="card cah-card-sm cah-white-card cah-other-border">
-                <div class="card-body">
-                    <p class="card-text text-dark center">
-                        {{ white_cards.5.CardText }}
-                    </p>
-                </div>
-                <p class="horizontal-center">{% get_score_average white_cards.5 black_card %}%</p>
-            </div>
-        </div>
-        <div class="inline-div mt-3">
-            <div class="card cah-card-sm cah-white-card cah-other-border">
-                <div class="card-body">
-                    <p class="card-text text-dark center">
-                        {{ white_cards.6.CardText }}
-                    </p>
-                </div>
-                <p class="horizontal-center">{% get_score_average white_cards.6 black_card %}%</p>
-            </div>
-        </div>
-        <div class="inline-div mt-3 mb-3">
-            <div class="card cah-card-sm cah-white-card cah-other-border">
-                <div class="card-body">
-                    <p class="card-text text-dark center">
-                        {{ white_cards.7.CardText }}
-                    </p>
-                </div>
-                <p class="horizontal-center">{% get_score_average white_cards.7 black_card %}%</p>
-            </div>
-        </div>
+        {% endfor %}
     </div>
+
     <br class="clear-inline">
     <div class="horizontal-center" style="margin: 50px;">
         <a href="/end/"> <button type="button" class="btn btn-outline-dark quitBtn">Quit</button> </a>
     </div>
+
 </body>
 </html>

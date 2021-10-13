@@ -4,6 +4,6 @@ from django.urls import path
 from .views import PlayView, PlayAverageView
 
 urlpatterns = [
-    path('<int:round>/<str:shuffle>/<int:bpk>/<str:wpks>', PlayView.as_view(), name='play-view'),
-    path('average/<int:round>/<str:shuffle>/<int:bpk>/<str:wpks>', PlayAverageView.as_view(), name='play-view'),
+    path('<int:num_cards>/<int:round>/<int:index>/<str:shuffle>/<int:bpk>/<str:wpks>/', PlayView.as_view(), name='play-view'),
+    path('score/<int:num_cards>/<int:round>/<int:index>/<str:shuffle>/<int:bpk>/<str:wpks>/', PlayAverageView.as_view(), name='play-score-view')
 ]

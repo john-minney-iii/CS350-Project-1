@@ -55,10 +55,6 @@
             border-radius: 12px;
             height: auto;
             width: 350px;
-
-
-
-
         }
 
         .cardWhite {
@@ -110,28 +106,24 @@
         <h2 id="end" class="m-4 text-light">Rounds Up!</h2>
     </center>
     <center>
-        <div class="overflow1 border border-dark border-3 mt-5">
-            <div class="float-containter m-3">
-
-                <div class="float-child">
-                    <div>
-                        <p class="card cardBlack justify-content-center">card text goes here</p>
+        <div class="overflow1">
+            <div class="float-container">
+                {% for bcard, wcard in highest_scores %}
+                    <div class="float-child">
+                        <p class="card cardBlack justify-content-center">Card: {{ bcard.CardNo }}<br>{{ bcard.CardText }}</p>
                     </div>
-                </div>
-
-                <div class="float-child">
-                    <div>
-                        <p class="card cardWhite justify-content-center">text also goes here</p>
+                    <div class="float-child">
+                        <p class="card cardWhite justify-content-center">Card: {{ wcard.CardNo }}<br>{{ bcard.CardText }}</p>
                     </div>
-
-                </div>
+                {% endfor %}
 
             </div>
         </div>
     </center>
     <center>
-        <div class="stickybtm m-5 "><a href="/play/1/False/0/0"><button
-                    class="button button 1 bg-dark text-light p-3 btn-outline-danger "> Play Again </button></a>
+        <div class="stickybtm m-5 ">
+            <a href="/play/8/1/0/True/0/0/" class="button button 1 bg-dark text-light p-3 btn-outline-dange">Play Again</a>
+
         </div>
     </center>
 </body>

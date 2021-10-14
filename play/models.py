@@ -41,6 +41,13 @@ class Score(models.Model):
     def __str__(self) -> str:
         return f'Black Card: {BlackCard.CardNo}, White Card: {WhiteCard.CardNo}'
 
+    @property
+    def average(self):
+        if self.timesAppeared != 0:
+            average = self.rating / self.timesAppeared
+            return average
+        return 0
+
     def return_averages(self):
         if self.timesAppeared != 0:
             average = self.rating / self.timesAppeared

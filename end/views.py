@@ -20,7 +20,8 @@ class EndTemplateView(View):
         highest_scores = []
 
         for card in dataBlkCards:
-            score = Score.objects.filter(BlackCard=card).order_by('rating')[0]
+            score = sorted(Score.objects.filter(BlackCard=card), key=lambda s: s.return_averages(), reverse=True)[0]
+            print(score.BlackCard.CardText, score.WhiteCard.CardText, score.return_averages())
             highest_scores.append((card, score.WhiteCard))
 
         context = {'black_cards': dataBlkCards,

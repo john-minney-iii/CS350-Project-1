@@ -1,64 +1,67 @@
 <!-- CS350-Project-1/end/index.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>End Page</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
     <style>
-        
-        .overflow1{
+        .overflow1 {
             background-color: #ffffff;
             width: 720px;
-            height: 400px;
+            height: 450px;
             overflow: auto;
             border-width: 2px;
             border-color: black;
         }
+
         .float-container {
             border: 3px solid #ffffff;
             position: relative;
         }
 
-        .float-child{
+        .float-child {
             width: auto;
             float: left;
             padding: 20px;
-            border:2px
+            border: 2px
         }
 
-        div.stickybtm{
+        div.stickybtm {
             position: static;
             border-bottom: 0;
             padding: 5px;
             z-index: 1;
         }
+
         .button {
             border: none;
-            
+
             color: black;
             text-align: center;
             text-decoration: none;
             display: inline-block;
             font-size: 32px;
-            margin: 4px 2px;
+            margin: 4px 4px;
             cursor: pointer;
             background-color: white;
             border: 3px solid black;
             border-radius: 12px;
             height: auto;
-            width: auto;
-            
-            
-            
-            
+            width: 350px;
+
+
+
+
         }
 
-        .cardWhite{
+        .cardWhite {
             width: 280px;
             border-radius: 25px;
             height: 380px;
@@ -68,7 +71,7 @@
             object-position: 50% 75%;
         }
 
-        .cardBlack{
+        .cardBlack {
             width: 280px;
             border-radius: 25px;
             height: 380px;
@@ -76,29 +79,61 @@
             color: white;
             position: right top;
         }
-        table, th, td{
+
+        table,
+        th,
+        td {
             border: 1px solid black;
+        }
+
+        #end {
+            border-radius: 25px;
+            background: #020202;
+            padding: 20px;
+            width: 600px;
+            height: 80px;
         }
     </style>
 
 </head>
-<body>
-    
-    
-    <center><h1 style="font-size: 150px;"><strong><font face = "Times New Roman", Times, serif>LMAO Rater</font></strong></h1>
-    <h2><font face = "Copperplate", fantasy;>Cards Against Humanity Edition</font></h2></center>
-        <center><div class="overflow1"><div class= "float-containter">
-        
-            <div class="float-child">
-         <div><p class = "card cardBlack justify-content-center">card text goes here</p></div>
-            </div>
-        
-            <div class="float-child">
-         <div><p class = "card cardWhite justify-content-center">text also goes here</p></div>
-        
-        </div>
 
-        </div></div></center>
-    <center><div class = "stickybtm"><a href="/play/1/False/0/0"><button class ="button button 1">Play Again</button></a></div></center>
+<body>
+
+
+    <center>
+        <h1 style="font-size: 150px;"><strong>
+                <font face="Times New Roman" , Times, serif>LMAO Rater</font>
+            </strong></h1>
+        <h2 class="mb-5">
+            <font face="Copperplate" , fantasy;>Cards Against Humanity Edition</font>
+        </h2>
+        <h2 id="end" class="m-4 text-light">Rounds Up!</h2>
+    </center>
+    <center>
+        <div class="overflow1 border border-dark border-3 mt-5">
+            <div class="float-containter m-3">
+
+                <div class="float-child">
+                    <div>
+                        <p class="card cardBlack justify-content-center">card text goes here</p>
+                    </div>
+                </div>
+
+                <div class="float-child">
+                    <div>
+                        <p class="card cardWhite justify-content-center">text also goes here</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </center>
+    <center>
+        <div class="stickybtm m-5 "><a href="/play/1/False/0/0"><button
+                    class="button button 1 bg-dark text-light p-3 btn-outline-danger "> Play Again </button></a>
+        </div>
+    </center>
 </body>
+
 </html>

@@ -95,15 +95,15 @@
     <h2><font face = "Copperplate", fantasy;>Cards Against Humanity Edition</font></h2></center>
         <center><div class="overflow1"><div class= "float-containter">
 
-            {% for card in black_cards %}
+            {% for bcard, wCard in highest_scores %}
             <div class="float-child">
                 <div>
-                    <p class = "card cardBlack justify-content-center">Card: {{ card.CardNo }}<br>{{ card.CardText }}</p>
+                    <p class = "card cardBlack justify-content-center">Card: {{ bcard.CardNo }}<br>{{ bcard.CardText }}</p>
                 </div>
             </div>
                 <div class = "float-child2">
                     <div>
-                    <p class = "card cardWhite justify-content-center">text also goes here</p></div>
+                    <p class = "card cardWhite justify-content-center">Card: {{ wCard.CardNo }}<br>{{ wCard.CardText }}</p></div>
                 </div>
             {% endfor %}
         

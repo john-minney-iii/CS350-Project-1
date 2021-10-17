@@ -20,9 +20,13 @@ class EndTemplateView(View):
         highest_scores = []
 
         for card in dataBlkCards:
-            score = sorted(Score.objects.filter(BlackCard=card), key=lambda s: s.return_averages(), reverse=True)[0]
-            print(score.BlackCard.CardText, score.WhiteCard.CardText, score.return_averages())
-            highest_scores.append((card, score.WhiteCard))
+            # Check if there is even a score assosiated with the black card
+            if len(Score.objects.filter(BlackCard=card)) != 0:
+                score = sorted(Score.objects.filter(BlackCard=card), key=lambda s: s.return_averages(), reverse=True)[0]
+                highest_scores.append((card, score.WhiteCard))
+            else:
+                # Just get a white card to show... (the first white card in the database is what I chose. This can obvsiouly change)
+                highest_scores.append((card, WhiteCard.objects.get(pk=1)))
 
         context = {'black_cards': dataBlkCards,
                    'white_cards': dataWhiteCards,

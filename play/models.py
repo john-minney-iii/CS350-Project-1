@@ -16,8 +16,28 @@ class BlackCard(models.Model):
 
 
 class Score(models.Model):
-    #Uses two foreign keys to define the relationship
+    # Uses two foreign keys to define the relationship
     WhiteCard = models.ForeignKey(WhiteCard, models.CASCADE)
     BlackCard = models.ForeignKey(BlackCard, models.CASCADE)
     rating = models.DecimalField(max_digits=4,decimal_places=2)
     timesAppeared = models.IntegerField(default=0)
+
+    def __str__(self) -> str:
+        return f'Black Card: {BlackCard.CardNo}, White Card: {WhiteCard.CardNo}'
+
+    @property
+    def average(self):
+        if self.timesAppeared != 0:
+            average = self.rating / self.timesAppeared
+            return average
+        return 0
+
+    def return_averages(self):
+        if self.timesAppeared != 0:
+            average = self.rating / self.timesAppeared
+            return average
+        return 0
+
+    def add_score(self, score):
+        self.rating += score
+        self.timesAppeared += 1

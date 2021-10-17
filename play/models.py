@@ -9,7 +9,7 @@ class WhiteCard(models.Model):
 
 class BlackCard(models.Model):
     CardNo = models.IntegerField()
-    CardText = models.CharField(max_length=500)
+    CardText = models.CharField(max_length=600)
 
     def __str__(self) -> str:
         return self.CardText

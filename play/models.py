@@ -6,6 +6,16 @@ class WhiteCard(models.Model):
 
     def __str__(self) -> str:
         return self.CardText
+    
+    def findScore(self, blackCard):
+        return Score.objects.filter(
+            WhiteCard=self,
+            BlackCard=blackCard
+        )[0]
+
+    def findScoreAverage(self, blackCard):
+        return self.findScore(blackCard).return_averages()
+
 
 class BlackCard(models.Model):
     CardNo = models.IntegerField()
